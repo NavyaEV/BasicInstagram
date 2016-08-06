@@ -95,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'NavyaEV$basicinstagram',
         'USER': 'NavyaEV',
-        'PASSWORD': 'Navya@151100',
+        'PASSWORD': 'navya@151100',
         'HOST': 'NavyaEV.mysql.pythonanywhere-services.com',
         'PORT': '3306',
         'OPTIONS':{
