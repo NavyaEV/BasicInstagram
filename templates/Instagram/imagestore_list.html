@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images Display</title>
+    <style type="text/css">
+        li {
+           float: left;
+        }
+
+        li a {
+            display: block;
+            color: sandybrown;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        p{
+            color: white;
+            font-size: xx-large;
+        }
+        .button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .status{
+            text-decoration-style: wavy;
+            font-family: "Harlow Solid Italic";
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+    <p>Welcome {{ user.username }}</p>
+    <ul>
+    <li style="float:right"><a href="/logout/">Logout</a></li>
+    </ul>
+    </p>
+
+    <br><br><br><br><br><br>
+    <a href="add" class="button">ADD</a>
+{#    </center>#}
+    <br><br>
+    {%for i in imagestore_list%}
+        <div id="colors" align="center" class="div">
+            <br>
+            <img src="{{  i.image.url }}" align="center" width="500" height="400"> <br>
+            <p class="status">{{ i.status }}</p>
+        </div>
+        <br><br>
+        <br><br>
+    {% endfor %}
+{% endblock %}
+
+</body>
+</html>

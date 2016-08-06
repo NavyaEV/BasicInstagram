@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Form</title>
+    {% load static %}
+        <style type="text/css">
+            body{
+                background-image: url("{% static 'bg2.jpg' %}");
+                background-attachment: fixed;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        div {
+            width: 1200px;
+            height: 450px;
+            padding: 10px;
+            margin: 10px;
+            opacity: 0.9;
+        }
+        #colors {
+            background-color: lightgray;
+            clear: left;
+            float: left;
+        }
+        h2{
+            color: white;
+            font-size: 50px;
+        }
+            .div1{
+            align-self: center;
+            align-content: center;
+            width: 1200px;
+            height: 250px;
+            padding: 10px;
+            margin: 20px;
+            opacity: 0.9;
+        }
+        .button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        </style>
+</head>
+<body>
+<h2>Basic Instagram</h2><br>
+<p>Add ur image here</p>
+<br><br>
+<div id="colors" class="div1">
+    <center>
+        <br><br><br>
+    <form  action="" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="SUBMIT" class="button">
+    </form>
+    </center>
+</div>
+</body>
+</html>

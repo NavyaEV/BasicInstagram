@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>BASIC INSTAGRAM |
+        {% block title %}{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'bootstrap.min.js' %}"></script>
+        <style type="text/css">
+            body{
+                background-image: url("{% static 'bg2.jpg' %}");
+                background-attachment: fixed;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        .div {
+            align-self: center;
+            align-content: center;
+            width: 1200px;
+            height: 500px;
+            padding: 10px;
+            margin: 10px;
+            opacity: 0.9;
+        }
+        .div1{
+            align-self: center;
+            align-content: center;
+            width: 1200px;
+            height: 250px;
+            padding: 10px;
+            margin: 40px;
+            opacity: 0.9;
+        }
+        #colors {
+            background-color: lightgray;
+            clear: left;
+            float: left;
+        }
+        h1{
+            color: white;
+            font-size: 50px;
+        }
+        .button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button1{
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        </style>
+    </head>
+    <body>
+    <h1>Basic Instagram</h1>
+        <h1>{% block head %}{% endblock %}</h1>
+        {% block content %}{% endblock %}
+
+    </body>
+</html>
